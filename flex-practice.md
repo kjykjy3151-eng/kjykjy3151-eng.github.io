@@ -1,23 +1,38 @@
-#Before — Flexbox 없이 (기본값)
-<div ID="container">
-  <div>박스1</div>
-  <div>박스2</div>
-  <div>박스3</div>
-</div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스 색 입히기</title>
+    <style>
+        /* 박스 공통 모양 */
+        .container > div {
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
 
+        /* 박스별 색 */
+        .container > div:nth-child(1) {
+            background-color: #14aecd;
+        }
 
-#After — 부모(container)에 display: flex 적용
-<!-- HTML: 박스 3개를 감싸는 부모 -->
-<div class="container">
-  <div>박스1</div>
-  <div>박스2</div>
-  <div>박스3</div>
-</div>
+        .container > div:nth-child(2) {
+            background-color: #0e7490;
+        }
 
-/* CSS: 부모에게 flex 지시 */
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
+        .container > div:nth-child(3) {
+            background-color: #101f35;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <div>박스1</div>
+        <div>박스2</div>
+        <div>박스3</div>
+    </div>
+
+</body>
+</html>
